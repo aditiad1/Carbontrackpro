@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator - Embedding Options</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2E7D32;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #2E7D32;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .code-block {
+            background-color: #f5f5f5;
+            border-left: 4px solid #2E7D32;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+            overflow-x: auto;
+        }
+        .option-container {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        .preview {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #2E7D32;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #1B5E20;
+        }
+        .copy-notification {
+            display: none;
+            color: #2E7D32;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carbon Footprint Calculator - Embedding Options</h1>
+    
+    <div class="option-container">
+        <h2>Basic Embedding</h2>
+        <p>This is the simplest way to embed the carbon footprint calculator on your website with default settings.</p>
+        
+        <div class="code-block" id="basic-code">
+&lt;iframe 
+    src="https://replit.com/@ameetsinhvaghel/CarbonTrackPro?embed=true" 
+    width="100%" 
+    height="1000" 
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    frameborder="0"
+    scrolling="auto"
+    title="Carbon Footprint Calculator"
+&gt;&lt;/iframe&gt;
+        </div>
+        
+        <button onclick="copyToClipboard('basic-code')">Copy Code</button>
+        <div class="copy-notification" id="basic-code-notification">Copied to clipboard!</div>
+    </div>
+    
+    <div class="option-container">
+        <h2>Customized Embedding</h2>
+        <p>Customize the appearance of the calculator to match your website's design using URL parameters.</p>
+        
+        <h3>Available URL Parameters</h3>
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Options</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>embed</td>
+                <td>true</td>
+                <td>Enables embedded mode</td>
+            </tr>
+            <tr>
+                <td>theme</td>
+                <td>light, dark</td>
+                <td>Sets the color theme</td>
+            </tr>
+            <tr>
+                <td>showBranding</td>
+                <td>true, false</td>
+                <td>Shows or hides the calculator branding</td>
+            </tr>
+            <tr>
+                <td>parentSite</td>
+                <td>your-domain.com</td>
+                <td>Identifies your site for analytics</td>
+            </tr>
+        </table>
+        
+        <div class="code-block" id="custom-code">
+&lt;iframe 
+    src="https://replit.com/@ameetsinhvaghel/CarbonTrackPro?embed=true&theme=light&showBranding=true&parentSite=your-domain.com" 
+    width="100%" 
+    height="1000" 
+    style="border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
+    allow="camera; microphone; autoplay; encrypted-media; fullscreen; geolocation"
+    frameborder="0"
+    scrolling="auto"
+    title="Carbon Footprint Calculator"
+&gt;&lt;/iframe&gt;
+        </div>
+        
+        <button onclick="copyToClipboard('custom-code')">Copy Code</button>
+        <div class="copy-notification" id="custom-code-notification">Copied to clipboard!</div>
+    </div>
+    
+    <div class="option-container">
+        <h2>Responsive Embedding</h2>
+        <p>Make the calculator responsive to fit different screen sizes with this responsive embedding code.</p>
+        
+        <div class="code-block" id="responsive-code">
+&lt;div style="position: relative; width: 100%; height: 0; padding-bottom: 150%;"&gt;
+    &lt;iframe 
+        src="https://replit.com/@ameetsinhvaghel/CarbonTrackPro?embed=true&theme=light" 
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+        frameborder="0"
+        scrolling="auto"
+        title="Carbon Footprint Calculator - Responsive"
+    &gt;&lt;/iframe&gt;
+&lt;/div&gt;
+        </div>
+        
+        <button onclick="copyToClipboard('responsive-code')">Copy Code</button>
+        <div class="copy-notification" id="responsive-code-notification">Copied to clipboard!</div>
+    </div>
+    
+    <div class="option-container">
+        <h2>Fixed Height Embedding</h2>
+        <p>Use a fixed height for the calculator, suitable for websites with strict layout requirements.</p>
+        
+        <div class="code-block" id="fixed-code">
+&lt;iframe 
+    src="https://replit.com/@ameetsinhvaghel/CarbonTrackPro?embed=true&theme=light" 
+    width="100%" 
+    height="800" 
+    style="border: none; max-width: 1000px; display: block; margin: 0 auto;"
+    frameborder="0"
+    scrolling="auto"
+    title="Carbon Footprint Calculator - Fixed Height"
+&gt;&lt;/iframe&gt;
+        </div>
+        
+        <button onclick="copyToClipboard('fixed-code')">Copy Code</button>
+        <div class="copy-notification" id="fixed-code-notification">Copied to clipboard!</div>
+    </div>
+    
+    <div class="option-container">
+        <h2>Dark Theme Embedding</h2>
+        <p>Use the dark theme for websites with dark backgrounds or for a more modern look.</p>
+        
+        <div class="code-block" id="dark-code">
+&lt;iframe 
+    src="https://YOUR_APP_URL?embed=true&theme=dark&showBranding=true" 
+    width="100%" 
+    height="1000" 
+    style="border: 1px solid #333; border-radius: 8px; background-color: #121212;"
+    frameborder="0"
+    scrolling="auto"
+    title="Carbon Footprint Calculator - Dark Theme"
+&gt;&lt;/iframe&gt;
+        </div>
+        
+        <button onclick="copyToClipboard('dark-code')">Copy Code</button>
+        <div class="copy-notification" id="dark-code-notification">Copied to clipboard!</div>
+    </div>
+    
+    <div class="option-container">
+        <h2>Troubleshooting</h2>
+        <ul>
+            <li><strong>If the calculator doesn't load:</strong> Make sure to replace "YOUR_APP_URL" with your actual Replit app URL.</li>
+            <li><strong>If you experience CORS issues:</strong> Your Streamlit app already has CORS enabled in the .streamlit/config.toml file.</li>
+            <li><strong>For security errors:</strong> Some websites block iframes. You may need to modify your Content Security Policy to allow the embed.</li>
+            <li><strong>For mobile responsiveness:</strong> Use the responsive embedding code and test on different devices.</li>
+        </ul>
+    </div>
+    
+    <script>
+        function copyToClipboard(elementId) {
+            const codeElement = document.getElementById(elementId);
+            const codeText = codeElement.innerText;
+            
+            navigator.clipboard.writeText(codeText).then(() => {
+                // Show the notification
+                const notification = document.getElementById(elementId + "-notification");
+                notification.style.display = "block";
+                
+                // Hide the notification after 2 seconds
+                setTimeout(() => {
+                    notification.style.display = "none";
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
